@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/theme.css">
+    <link rel="stylesheet" href="../css/profile.css">
+    <title>todo App</title>
+</head>
+<body>
+    <nav>
+        <div class="image">
+            <img src="../assets/logo.png" alt="">
+        </div>
+        <div class="logout">
+            <form action="/signout" method="POST">
+                <button type="submit">Sign Out</button>
+            </form>
+        </div>
+    </nav>
+    <section class="message">
+        
+    </section>
+    <main>
+        <section class="add">
+            <form action="/add" method="post">
+                <input type="text" name="newTodo" id="newTodo" placeholder="Task desciption" required>
+                <button type="submit">Add Task</button>
+            </form>
+        </section>
+
+
+
+        <section class="list">
+            <% if(listItems.length >0){ %>
+                <% for(var i=0;i<listItems.length;i++){ %> 
+                    
+                        <% if(listItems[i].done === 'done'){ %>
+
+                            <div class="list-item-body done">
+                                <div class="task-head">
+                                    <h2>
+                                        <%= listItems[i].item %> 
+                                    </h2>
+                                </div>
+                                <div class="buttons-div">
+                                    <div class="change-btns">
+                                        <form action="/delete" method="POST">
+                                            <input type="text" name="id" class="hidden" value="<%= listItems[i].id %> ">
+                                            <button class='delete-btn' id="delete" type="submit">Delete</button>
+                                        </form>
+                                    </div>
+                                </div>
+                                
+                            </div>
+
+                        <% } else{ %>
+
+                            <div class="list-item-body">
+                                <div class="task-head">
+                                    <h2>
+
+                                        <%= listItems[i].item %> 
+
+                                    </h2>
+                                </div>
+                                <div class="buttons-div">
+                                    <div class="change-btns">
+                                        
+                                        <form action="" method="POST">
+                                            <input type="text" name="id" class="hidden"  value="<%= listItems[i].id %> ">
+                                            <button class="delete-btn" id="delete<%= i %>"  type="submit">Delete</button>
+                                        </form>
+                                        <button class="edit" id="edit<%= i %>"   onclick=openEdit(<%= i %>) >Edit</button>
+                                    </div>
+                                    
+                                    <form action="" method="POST">
+                                        <input type="text" name="id" class="hidden"  value="<%= listItems[i].id %> ">
+                                        <button class="done-btn" id="done<%= i %>"  formaction="/done">Done</button>
+                                    </form>
+                                </div>
+                                
+                                <div class="edit-div" id="edit-div<%= i %>">
+                                    <h4>Change Task</h4>
+                                    <form action="/edit" method="POST">
+                                        <input type="text" name="id" class="hidden"  value="<%= listItems[i].id %> ">
+                                        <input type="text" name="newText" value="<%= listItems[i].item %> ">
+                                        <button class="done-btn" type="submit">Change</button>
+                                        <button class="delete-btn" type="button" onclick=closeEdit(<%= i %>)>Close</button>
+                                    </form>
+                                </div>
+                            
+                            </div>
+
+                        <% } %> 
+                    
+                <% } %> 
+            <% }else{ %>
+                <h2>No Task Added</h2>
+            <% } %>  
+
+        </section>
+
+    </main>
+    
+    <script>
+        function openEdit(num){
+            
+                document.getElementById(('edit-div'+num)).style.display = 'block';
+                document.getElementById('delete'+num).style.display = 'none';
+                document.getElementById('done'+num).style.display = 'none';
+                document.getElementById('edit'+num).style.display = 'none';
+                
+            
+        }
+        function closeEdit(num){
+            document.getElementById('edit-div'+num).style.display= 'none';
+            document.getElementById('delete'+num).style.display = 'block';
+            document.getElementById('done'+num).style.display = 'block';
+            document.getElementById('edit'+num).style.display = 'block';
+                
+                
+        }
+    </script>
+</body>
+</html>

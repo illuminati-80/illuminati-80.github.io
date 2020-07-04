@@ -1,0 +1,133 @@
+@import '_config';
+
+h1{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    color: $black;
+}
+
+h2{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.8rem;
+    color: $black;
+}
+
+h3{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+    color: $black;
+}
+
+h4{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.3rem;
+    color: $black;
+}
+
+h5{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1rem;
+    color: $black
+}
+
+h6{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:.8rem;
+    color: $black;
+}
+
+p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1rem;
+    line-height: 1rem;
+    color: $black;
+}
+
+input{
+    font-family: 'Times New Roman', Times, serif;
+    border: 1px solid $black;
+    height: 2rem;
+    margin:  .5rem 0;
+    width: 100%;
+    padding: 1rem;
+}
+
+button{
+    color:$white;
+    background-color: $blue;
+    border: none;
+    height: 2rem;
+    border-radius: .2rem;
+    font-weight: bold;
+    margin: .5rem 0;
+}
+
+#delete{
+    background-color: $red;
+}
+
+#done{
+    background-color: $green;
+}
+
+a{
+    text-decoration: none;
+    color: $white;
+    font-weight: bold;
+}
+
+body{
+    margin: 0;
+}
+
+nav{
+    background-color: $grey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 1rem;
+    box-shadow: .5rem .5rem .3rem $lightgrey;
+    
+    .image{
+        height: 6rem;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        img{
+            height: 120%;
+            object-fit: cover;
+        }
+    }
+
+    .other{
+        align-self: center;
+    }
+}
+
+.message{
+    width: 100%;
+    height: 2rem;
+    background-color: $red;
+    color: $black;
+    opacity: 0;
+    transition: opacity 8s;
+}
+
+
+@media (min-width: 700px){
+    nav{
+        padding: 0 2rem;
+    }
+}
+
+@media (min-width: 1024px){
+    nav{
+        padding: 0 5rem;
+    }
+}

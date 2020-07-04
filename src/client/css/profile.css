@@ -1,0 +1,101 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.delete-btn {
+  background-color: #f54141;
+}
+
+.done-btn {
+  background-color: #13ca03;
+}
+
+main .add {
+  padding: 1rem;
+}
+
+main .list {
+  padding: 1rem;
+}
+
+main .list .list-item-body {
+  -webkit-box-shadow: 0.5rem 0.5rem 0.3rem #f0f0f0;
+          box-shadow: 0.5rem 0.5rem 0.3rem #f0f0f0;
+  padding: 1rem;
+  margin: 1.5rem;
+  background-color: #d5e3f7;
+}
+
+main .list .list-item-body .task-head h2 {
+  text-align: left;
+}
+
+main .list .list-item-body .buttons-div {
+  padding-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .list .list-item-body .buttons-div .change-btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-flex: .45;
+      -ms-flex: .45;
+          flex: .45;
+}
+
+main .list .list-item-body form .hidden {
+  display: none;
+}
+
+main .list .list-item-body .edit-div {
+  display: none;
+}
+
+main .list .done {
+  background-color: #cff7c6;
+}
+
+@media (min-width: 700px) {
+  main .add {
+    padding: 2rem;
+  }
+  main .list {
+    padding: 2rem;
+  }
+  main .list .list-item-body {
+    padding: 1rem;
+  }
+  main .list .list-item-body .buttons-div .change-btns {
+    -webkit-box-flex: .2;
+        -ms-flex: .2;
+            flex: .2;
+  }
+}
+
+@media (min-width: 1024px) {
+  main .add {
+    padding: 2rem 5rem;
+  }
+  main .list {
+    padding: 2rem 5rem;
+  }
+  main .list .list-item-body {
+    padding: 2rem;
+  }
+  main .list .list-item-body .buttons-div .change-btns {
+    -webkit-box-flex: .11;
+        -ms-flex: .11;
+            flex: .11;
+  }
+}
+/*# sourceMappingURL=profile.css.map */

@@ -1,0 +1,77 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 70vh;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+main .signin {
+  width: 80%;
+  margin: auto;
+  -webkit-box-shadow: 0.5rem 0.5rem 0.3rem #f0f0f0;
+          box-shadow: 0.5rem 0.5rem 0.3rem #f0f0f0;
+  border: 1px solid #c8c8c8;
+}
+
+main .signin h1 {
+  margin: 1rem;
+}
+
+main .signin form {
+  padding: 2rem 1rem;
+  background-color: #c8c8c8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+main .not-signin {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .not-signin h6 {
+  margin: 0;
+}
+
+@media (min-width: 700px) {
+  main .signin {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1024px) {
+  main .signin {
+    width: 30%;
+  }
+}
+/*# sourceMappingURL=signin.css.map */

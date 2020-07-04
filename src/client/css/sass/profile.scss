@@ -1,0 +1,99 @@
+@import '_config';
+
+.delete-btn{
+    background-color: $red;
+}
+.done-btn{
+    background-color: $green;
+}
+
+main{
+    .add{
+        padding: 1rem;
+    }
+
+    .list{
+        padding: 1rem;
+        
+        .list-item-body{
+            box-shadow: .5rem .5rem .3rem $lightgrey;;
+            padding: 1rem;
+            margin: 1.5rem;
+            background-color: $lightblue;
+            
+            .task-head{
+                h2{
+                
+                    text-align: left;
+                }
+            }
+
+            .buttons-div{
+                padding-top:1rem;
+                display: flex;
+                justify-content: space-between;
+                .change-btns{
+                    display: flex;
+                    justify-content: space-between;
+                    flex: .45   ;
+                
+                    
+                }
+            }
+
+            form{
+                .hidden{
+                    display:none;
+                }
+            } 
+
+            .edit-div{
+                display:none;
+            }
+        }
+        .done{
+            background-color: $lightgreen;
+        }
+
+    }
+}
+
+@media (min-width: 700px){
+    main{
+        .add{
+            padding: 2rem;
+        }
+        .list{
+            padding: 2rem;
+            
+            .list-item-body{
+                padding: 1rem;
+                .buttons-div{
+                    .change-btns{
+                        flex: .2;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px){
+    main{
+        .add{
+            padding:2rem 5rem;
+        }
+        .list{
+            padding:2rem 5rem;
+            
+            .list-item-body{
+                padding: 2rem;
+                .buttons-div{
+                    .change-btns{
+                        flex: .11;
+                    }
+                }
+            }
+        }
+    }
+}

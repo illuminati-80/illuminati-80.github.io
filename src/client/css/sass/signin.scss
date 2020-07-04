@@ -1,0 +1,53 @@
+@import '_config';
+body{
+    height: 100vh;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    justify-content: space-around;
+    
+    .signin{
+        width: 80%;
+        margin: auto;
+        box-shadow: .5rem .5rem .3rem $lightgrey;
+        border: 1px solid $grey;
+        h1{
+            margin: 1rem;;
+        }
+        form{
+            padding: 2rem 1rem;
+            background-color: $grey;
+            display: flex;
+            flex-direction: column;
+            align-content: center;             
+        }
+    }
+    .not-signin{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h6{
+            margin: 0;
+        }
+    }
+
+}
+
+@media (min-width: 700px){
+    main{
+        .signin{
+            width: 50%;
+        }
+    }
+}
+
+@media (min-width: 1024px){
+    main{
+        .signin{
+            width: 30%;
+        }
+    }
+}
